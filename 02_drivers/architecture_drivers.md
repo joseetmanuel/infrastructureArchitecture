@@ -1,16 +1,21 @@
 # Architecture Drivers
-## Personal Technology Architecture — Etma (2026)
+## Arquitectura Tecnológica Personal — Etma (2026)
 
 ---
 
-# Overview
+# Descripción General
 
-Architecture Drivers represent the key motivations, risks, and technological opportunities that justify the creation of the Personal Technology Architecture for Etma.  
-These drivers guide the definition of requirements, architectural decisions, and future evolution of the ecosystem.
+Los **Architecture Drivers** representan las motivaciones, riesgos y oportunidades tecnológicas que justifican la creación de la Arquitectura Tecnológica Personal de Etma.
 
-Drivers are classified according to common Enterprise Architecture practices used in frameworks such as TOGAF.
+Estos drivers guían:
 
-Categories used:
+- la definición de requerimientos
+- las decisiones de arquitectura
+- la evolución futura del ecosistema tecnológico
+
+La clasificación utilizada sigue prácticas comunes de arquitectura empresarial como las propuestas por TOGAF.
+
+Categorías utilizadas:
 
 - Business Drivers
 - Risk Drivers
@@ -22,69 +27,69 @@ Categories used:
 
 ## BD-01 — Secure and Ubiquitous Data Access
 
-Personal and professional information must be accessible from any authorized node within the home network or remotely via the internet, provided valid credentials are used.
+La información personal y profesional debe poder **accederse desde cualquier nodo autorizado de la red doméstica o desde internet**, siempre que se cuente con las credenciales correctas.
 
-This includes:
+Esto incluye:
 
-- source code repositories
-- personal and professional documents
-- photographs
-- development projects
+- repositorios de código
+- documentos personales y profesionales
+- fotografías
+- proyectos de desarrollo
 
-The architecture must enable secure, reliable, and consistent access to data.
+La arquitectura debe garantizar **acceso seguro, confiable y consistente a la información**.
 
 ---
 
 ## BD-02 — Operational Continuity
 
-The technological ecosystem must allow professional work to continue even if some devices are unavailable.
+El ecosistema tecnológico debe permitir continuar las actividades profesionales **aunque uno o varios dispositivos no estén disponibles**.
 
-This includes:
+Esto incluye:
 
-- remote access to infrastructure
-- access to source code and documents
-- ability to work from any geographic location
-- fallback workstations in case of hardware unavailability
+- acceso remoto a la infraestructura
+- disponibilidad de documentos y código
+- capacidad de trabajar desde cualquier ubicación geográfica
+- estaciones de trabajo de respaldo para emergencias
 
 ---
 
 ## BD-03 — Personal Media Platform
 
-The architecture must support a personal media distribution platform based on Plex Media Server.
+La arquitectura debe soportar una plataforma personal de distribución multimedia basada en **Plex Media Server**.
 
-The platform will provide:
+Esta plataforma permitirá:
 
-- movie streaming
-- family photo sharing
-- controlled access for relatives
-- compatibility with smart TVs, tablets, and mobile devices
-- secure remote access when required
+- streaming de películas
+- compartir fotografías familiares
+- acceso controlado para familiares
+- consumo desde televisiones inteligentes, tablets y dispositivos móviles
+- acceso remoto seguro cuando sea necesario
 
 ---
 
 ## BD-04 — Structured Technology Organization
 
-The personal technology ecosystem must be organized and managed as a coherent system to prevent infrastructure sprawl.
+El ecosistema tecnológico personal debe mantenerse **organizado y documentado como un sistema coherente**, evitando el crecimiento desordenado de la infraestructura.
 
-This includes:
+Esto incluye:
 
-- hardware inventory management
-- service documentation
-- user access control
-- integration of consumer devices such as smart TVs and tablets
+- inventario de hardware
+- documentación de servicios
+- control de accesos de usuarios
+- integración de dispositivos consumidores como televisiones inteligentes y tablets
 
 ---
 
 ## BD-05 — Focused Study and Development Environment
 
-The architecture must support a focused technical study and development environment.
+La arquitectura debe proporcionar un entorno estable para **estudio técnico y desarrollo personal**.
 
-Users must be able to access laboratory resources through:
+Debe ser posible acceder a los recursos del laboratorio mediante:
 
 - SSH
 - RDP
-- remote development tools
-- mobile or portable devices
+- herramientas de desarrollo remoto
+- dispositivos portátiles o móviles
 
 ---
 
@@ -92,25 +97,29 @@ Users must be able to access laboratory resources through:
 
 ## RD-01 — Data Loss Prevention
 
-There is a risk of losing irreplaceable information such as historical source code, personal documents, or family photographs.
+Existe el riesgo de pérdida de información crítica como:
 
-The architecture must mitigate this risk through:
+- código histórico
+- documentos personales
+- fotografías familiares
 
-- redundant storage
-- backup mechanisms
-- separation between compute and storage layers
+La arquitectura debe mitigar este riesgo mediante:
+
+- almacenamiento redundante
+- mecanismos de respaldo
+- separación entre capas de cómputo y almacenamiento
 
 ---
 
 ## RD-02 — Infrastructure Single Point of Failure
 
-Some services currently depend on a single machine.
+Actualmente algunos servicios o datos pueden depender de una sola máquina.
 
-The architecture must reduce single points of failure by enabling:
+La arquitectura debe reducir los **puntos únicos de falla** permitiendo:
 
-- service migration
-- infrastructure redundancy
-- distributed storage and services
+- migración de servicios
+- redundancia de infraestructura
+- distribución de almacenamiento y servicios
 
 ---
 
@@ -118,51 +127,51 @@ The architecture must reduce single points of failure by enabling:
 
 ## TD-01 — Personal AI Capability
 
-The infrastructure should support experimentation with local artificial intelligence models such as DeepSeek or similar LLMs.
+La infraestructura debe permitir experimentar con modelos de inteligencia artificial ejecutados localmente, como **DeepSeek** u otros modelos de lenguaje.
 
-This enables:
+Esto habilita:
 
-- hands-on AI experimentation
-- local inference workloads
-- integration with personal services in the future
+- aprendizaje práctico en inteligencia artificial
+- ejecución local de inferencias
+- integración futura con servicios personales
 
 ---
 
 ## TD-02 — Personal Technology Laboratory
 
-A semi-production laboratory environment must exist to allow experimentation with modern infrastructure technologies.
+Debe existir un laboratorio tecnológico **semi-productivo** que permita experimentar con tecnologías modernas.
 
-The architecture will include:
+La arquitectura contemplará dos tipos de nodos:
 
-Production Node
-- stable services
-- storage services
-- media services
-- core home infrastructure
+**Nodo de Producción**
+- servicios estables
+- almacenamiento
+- plataforma multimedia
+- servicios domésticos principales
 
-Development Node
-- virtualization
-- container platforms
-- experimental deployments
-- testing of new technologies
+**Nodo de Desarrollo**
+- virtualización
+- contenedores
+- despliegues experimentales
+- pruebas de nuevas tecnologías
 
 ---
 
 ## TD-03 — Hybrid Multi-Cloud Infrastructure Strategy
 
-The architecture must support a hybrid and multi-cloud strategy integrating local infrastructure with major public cloud providers.
+La arquitectura debe soportar una estrategia **híbrida y multi-nube**, integrando la infraestructura local con los principales proveedores de nube pública.
 
-Supported providers include:
+Proveedores considerados:
 
 - Amazon Web Services (AWS)
 - Microsoft Azure
 - Google Cloud Platform (GCP)
 
-The objective is to:
+El objetivo es:
 
-- leverage the strengths of each cloud provider
-- optimize operational costs
-- experiment with multi-cloud architectures
-- avoid vendor lock-in
+- aprovechar las fortalezas de cada proveedor
+- optimizar costos operativos
+- experimentar con arquitecturas multi-cloud
+- evitar dependencia tecnológica de un solo proveedor
 
-The cloud environment will act as an extension of the personal technology laboratory and may support development, testing, and scalable services when required.
+La nube actuará como **extensión del laboratorio tecnológico personal**, permitiendo ejecutar servicios o pruebas cuando sea necesario.
